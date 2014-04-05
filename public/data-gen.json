@@ -1,0 +1,40 @@
+[
+    '{{repeat(1)}}',
+    {
+        id: '{{index()}}',
+        username: '{{firstName()}}',
+        email: '{{email("random")}}',
+        events: [
+            '{{repeat(1)}}',
+            {
+                id: '{{index()}}',
+                name: '{{lorem([1], "words")}}',
+                description: '{{lorem([1])}}',
+                date: '{{date}}',
+                capacity: '{{numeric("100", "500")}}',
+                owner: '',
+                access: '',
+                created_at: '{{date}}',
+                guests: [
+                    '{{repeat(1)}}',
+                    {
+                        id: '{{index()}}',
+                        username: '{{firstName()}} {{surname()}}',
+                        created_at: '{{date}}',
+                        checked_in: '{{bool()}}',
+                        checkin_time: '{{date}}',
+                        list_type: '{{lorem([1])}}',
+                        added_by: '{{firstName()}}',
+                        plus_ones: [
+                            '{{repeat(0,1)}}',
+                            {
+                                id: '{{index()}}',
+                                checkin_time: '{{date}}'
+                            }
+                        ]
+                    }
+                    ]
+            }
+        ]
+    }
+]

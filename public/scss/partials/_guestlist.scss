@@ -1,0 +1,40 @@
+.guestlist {
+}
+
+.guestlist__item {
+	margin-bottom: 1em;
+}
+
+.events__list {
+}
+
+.event__attendee__list {
+	list-style: none;
+}
+
+.event__attendee {
+	margin-bottom: 1em;
+	background: blue;
+}
+
+.event__attendee__checkbox {
+	display: inline-block;
+	width: 5%;
+	background: green;
+	float: left;
+
+	&+ label {
+	}
+}
+
+.event__attendee__label {
+	display: inline-block;
+	width: 95%;
+	padding: 1em;
+	background: white;
+	cursor: pointer;
+}
+
+.event__attendee__checkbox:checked + .event__attendee__label {
+	text-decoration: line-through;
+}

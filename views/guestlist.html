@@ -1,0 +1,31 @@
+<ul class="guestlist">
+	{{#each userdata}}
+		<li class="guestlist__item">
+			<p>username: {{username}}</p>
+			<ul class="events__list">
+				{{#each events}}
+					<li class="events__list">
+						<p>event name: {{name}}</p>
+						<p>date: {{date}}</p>
+						<p>capacity: {{capacity}}</p>
+						<p>description: {{description}}</p>
+						<ul class="event__attendee__list">
+							{{#each guests}}
+							<li class="event__attendee">
+								<input id="event__attendee__checkbox--{{../name}}-{{id}}" class="event__attendee__checkbox event__attendee__checkbox--{{../name}}-{{id}}" name="event__attendee__checkbox--{{../name}}-{{id}}" type="checkbox" data-attendeeId="event__attendee__checkbox--{{../name}}-{{id}}"/>
+								<label class="event__attendee__label" for="event__attendee__checkbox--{{../name}}-{{id}}">
+									{{username}}
+								</label>
+							</li>
+							{{/each}}
+						</ul>
+					</li>
+				{{/each}}
+			</ul>
+		</li>
+	{{/each}}
+</ul>
+
+
+
+
