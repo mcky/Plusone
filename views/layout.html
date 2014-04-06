@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>{{title}}</title>
+	<title>{{title}}</title>
 	<script src="./socket.io/socket.io.js"></script>
 	{{#each scripts}}
 		<script src="./{{script}}.js"></script>
@@ -12,10 +12,37 @@
 </head>
 
 <body class="{{title}}">
-	{{{body}}}
+<!-- 	<div class="off-canvas-wrap">
+		<div class="inner-wrap">
+			<nav class="tab-bar"> <a class="left-off-canvas-toggle menu-icon">
+				<span>PlusOne</span>
+				</a>
 
+			</nav>
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					{{>nav}}
+				</ul>
+			</aside> <a class="exit-off-canvas" href="#"></a>
+
+			<section class="main-content" role="main">
+			<ul class="sidebar">
+				{{>nav}}
+			</ul> -->
+						{{{body}}}
+<!-- 			</section>
+		</div>
+	</div>
+ -->
+
+<!--<script src='//10.100.93.229:3000/socket.io/socket.io.js'></script>
 <script>var ___socket___ = io.connect('http://10.100.93.229:3000');</script>
-<script src='//10.100.93.229:3001/client/browser-sync-client.0.7.0.js'></script>
+<script src='//10.100.93.229:3001/client/browser-sync-client.0.7.0.js'></script>-->
 
+<script>
+$( document ).ready(function() {
+	$(document).foundation();
+});
+</script>
 </body>
 </html>

@@ -1,11 +1,15 @@
-<h1>Guestlist template</h1>
-
-
-<ul class="guestlist">
-	{{#each userdata}}
-		<p>{{username}}</p>
-	{{/each}}
-</ul>
+{{#each userdata}}
+	<ul>
+		{{#each events}}
+		<li>
+			<p>event name: {{name}}</p>
+		</li>
+<!-- 			<p>date: {{date}}</p>
+			<p>capacity: {{capacity}}</p>
+			<p>description: {{description}}</p> -->
+		{{/each}}
+	</ul>
+{{/each}}
 
 
 

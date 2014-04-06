@@ -1,0 +1,16 @@
+<form action="/create" method="post" accept-charset="utf-8">
+  <input type="text" name="content" />
+</form>
+
+{{todos}}
+<ul>
+{{#each todos}}
+	<form action="/update/{{id}}" method="post" accept-charset="utf-8">
+        <input type="text" name="content" value="{{content}}" />
+
+        <a href="/edit/{{id}}" title="Update this todo item">{{content}}</a>
+</form>
+{{/each}}
+</ul>
+
+ 

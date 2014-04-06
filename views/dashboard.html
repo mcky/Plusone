@@ -1,0 +1,16 @@
+<section class="container">
+
+	<h1>Upcoming events</h1>
+	<input type="text">
+
+	<ul class="dashboard__event-list">
+		{{#each events}}
+		<li class="dashboard__event">
+			<a href="guestlist">
+				<span class="dashboard__event__name">{{name}} {{_id}}</span>
+				<span class="dashboard__event__date">{{date}}</span>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+</section>
